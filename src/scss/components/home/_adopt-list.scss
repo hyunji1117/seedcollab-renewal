@@ -1,0 +1,140 @@
+// src/scss/components/home/_adopt-list.scss
+// 입양 리스트 영역 (page-3)
+
+#page-3 {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+
+  .page-3-tit {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+
+    .sec3-h1 {
+      font-size: 50px;
+      color: rgba(34, 34, 34, 0.8);
+
+      /* 추후 변경 */
+    }
+  }
+
+  .sec3-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 100px 0;
+    height: 100%;
+
+    .img-wrapper {
+      width: 85%;
+
+      /* margin, width 이용해서 중앙 간격 유지 */
+      height: 100%;
+
+      .img-container {
+        position: sticky;
+        top: 135px;
+
+        figure {
+          text-align: right;
+
+          /* img 오른쪽 정렬렬 */
+
+          img {
+            width: 482px;
+            height: 570px;
+            border-radius: 25px;
+            -o-object-fit: cover;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    .swiper-container {
+      width: 95%;
+
+      /* margin, width 이용해서 중앙 간격 유지 */
+      height: 100%;
+      text-align: left;
+      margin-left: 5%;
+
+      /* margin, width 이용해서 중앙 간격 유지 */
+
+      .swiper-wrapper {
+        width: 100%;
+        display: grid;
+        row-gap: 3.5rem;
+        align-items: right;
+
+        .swiper-slide {
+          width: 587px;
+          height: 245px;
+          background-color: #F5F3ED;
+          border: 1px solid #E1E0DB;
+
+          /* padding: 30px 40px 40px; */
+          border-radius: 25px;
+
+          &:hover img {
+            width: 587px;
+            height: 245px;
+
+            /* transform: rotateY(360deg);
+            transition: 1s; */
+            /* transform: scale(1.1);
+            transition: 1s; */
+          }
+
+          .profile-content {
+            width: 50%;
+            height: 100%;
+
+            /* background: #999; */
+            float: left;
+            display: grid;
+            justify-items: center;
+            line-height: 1.6;
+            align-content: center;
+            line-height: 1.6;
+
+            > p {
+              padding-left: 3px;
+            }
+          }
+
+          .profile-img {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* overflow: hidden; */
+
+            img {
+              /* width: 175px;
+              height: 175px;
+              border-radius: 25px; */
+              width: 100%;
+              height: 100%;
+              border-radius: 0 25px 25px 0;
+              -o-object-fit: cover;
+              object-fit: cover;
+            }
+          }
+
+          &:last-of-type {
+            text-align: center;
+
+            .profile-img img {
+              width: 75%;
+              height: 75%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
