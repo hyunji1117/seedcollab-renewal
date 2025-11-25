@@ -28,7 +28,7 @@
     align-items: center;
 
     &::after {
-      background: url("../assets/banner-3.jpg");
+      background: url("/src/assets/images/jpg/banner-4.jpg");
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
@@ -195,19 +195,19 @@
       border-radius: 20px;
 
       &.box1 {
-        background-image: url(../assets/page2-img1.png);
+        background-image: url(/src/assets/images/png/page2-img1.png);
       }
 
       &.box2 {
-        background-image: url(../assets/page2-img2.png);
+        background-image: url(/src/assets/images/png/page2-img2.png);
       }
 
       &.box3 {
-        background-image: url(../assets/page2-img3.png);
+        background-image: url(/src/assets/images/png/page2-img3.png);
       }
 
       &.box4 {
-        background-image: url(../assets/page2-img4.png);
+        background-image: url(/src/assets/images/png/page2-img4.png);
       }
     }
   }

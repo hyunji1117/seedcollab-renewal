@@ -7,19 +7,19 @@
 
 // 레이아웃
 @use 'layout/layout';
+@use 'layout/nav';
+@use 'layout/footer';
 
 // 공통 컴포넌트
-@use 'components/common/nav';
-@use 'components/common/footer';
-@use 'components/common/button';
+@forward 'components/common/button';
 
 // 페이지별 컴포넌트 (홈페이지)
-@use 'components/home/intro';
-@use 'components/home/adopt-list';
-@use 'components/home/adopt-process';
+@forward 'components/home/intro';
+@forward 'components/home/adopt-list';
+@forward 'components/home/adopt-process';
 
 // 페이지별 컴포넌트 (서브페이지)
-@use 'components/sub/notice-list';
+@forward 'components/sub/notice-list';
 
 
 // body {
