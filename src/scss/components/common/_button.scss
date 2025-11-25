@@ -1,0 +1,69 @@
+// src/scss/components/common/_button.scss
+// 공통 버튼 스타일
+
+// top 버튼
+#top-btn {
+  position: fixed;
+  bottom: 3rem;
+  right: 2.5rem;
+  z-index: 500;
+
+  i {
+    color: #EB9C00;
+    font-size: 1.5rem;
+  }
+}
+
+// 네비게이션 후원하기 버튼
+.nav-button {
+  text-align: right;
+  height: 5rem;
+
+  .btn-container {
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: 20px;
+    background: #2F2521;
+    display: inline-block;
+    margin-top: 1.25rem;
+    cursor: pointer;
+    z-index: 9;
+    position: relative;
+  }
+}
+
+// 네이게이션 후원하기 버튼 내 애니메이션 효과
+.nav-container .btn {
+  position: absolute;
+  top: 0.1rem;
+  left: 0.1rem;
+  overflow: hidden;
+  width: 7.8rem;
+  height: 2.3rem;
+  background: #2F2521;
+  border-radius: 30px;
+
+  .txt {
+    position: relative;
+    z-index: 2;
+    display: block;
+    line-height: 2.3rem;
+    text-align: center;
+    right: 1rem;
+    color: #FCF6EC;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 7.8rem;
+    height: 2.3rem;
+    border-radius: 30px;
+    background: #FCF6EC;
+    position: absolute;
+    top: 0rem;
+    left: 8rem;
+    transition: linear 0.4s;
+    z-index: 1;
+  }
+}
