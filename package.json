@@ -1,0 +1,20 @@
+{
+  "name": "seedcollab",
+  "version": "1.0.0",
+  "description": "Link: (https://coworkcarrot.github.io/seedcollab/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyunji1117/seedcollab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hyunji1117/seedcollab/issues"
+  },
+  "homepage": "https://github.com/hyunji1117/seedcollab#readme"
+}
