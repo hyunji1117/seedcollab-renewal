@@ -1,0 +1,11 @@
+@use 'base/reset';
+@use 'base/typography';
+@use 'layout/layout';
+@use 'components/button';
+
+body {
+  @include typography.body-text;
+  background-color: $color-background;
+  margin: 0;
+  padding: 0;
+}
