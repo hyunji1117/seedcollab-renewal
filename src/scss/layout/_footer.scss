@@ -3,26 +3,35 @@
 
 /* footer */
 
+@use '../base/variables' as *;
+
+/* footer */
 footer {
   width: 100%;
-  height: 340px;
+  min-height: 340px;
   background: #3A302C;
 
-  /* background: #2F2521; */
-  /* display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
-  padding: 2.5rem;
-  box-sizing: border-box; */
-
   .footer-container {
-    height: 340px;
-
-    /* background: #99A; */
+    max-width: $container-max-width;
+    min-height: 340px;
     display: grid;
     grid-template-columns: 3fr 1fr 1fr;
-    padding: 2.5rem 0;
+    padding: 2.5rem;
     box-sizing: border-box;
     margin: 0 auto;
+    
+    @include respond-to(md) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      padding: 2.5rem;
+      gap: 30px;
+    }
+    
+    @include respond-to(sm) {
+      grid-template-columns: 1fr;
+      text-align: center;
+      padding: 2.5rem;
+    }
   }
 
   p, .f-nav li a, b, h4 {
@@ -32,29 +41,112 @@ footer {
 
 .footer-logo {
   margin-left: 50px;
+  
+  @include respond-to(md) {
+    margin-left: 0;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  @include respond-to(sm) {
+    margin-left: 0;
+    grid-column: 1;
+    grid-row: 1;
+  }
 
   img {
     width: 300px;
+    
+    @include respond-to(sm) {
+      width: 200px;
+      margin: 0 auto;
+    }
   }
 
   p {
     &.txt {
       margin: 30px 0 60px 0;
       line-height: 1.5;
+      
+      // md, sm에서는 숨기고 footer-nav가 이 위치를 차지
+      @include respond-to(md) {
+        display: none;
+      }
     }
 
     &.copyright {
       font-size: 0.8rem;
+      
+      @include respond-to(md) {
+        margin-top: 20px;
+      }
     }
   }
 }
 
-footer .footer-nav .f-nav ul li {
-  margin-bottom: 10px;
+.footer-nav {
+  @include respond-to(md) {
+    // footer-logo 영역 내 txt 위치로 이동
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: center;
+    margin-top: 100px; // 로고 아래로 이동
+  }
+  
+  @include respond-to(sm) {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 0;
+  }
+  
+  .f-nav ul {
+    @include respond-to(md) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+    }
+    
+    @include respond-to(sm) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 15px;
+    }
+    
+    li {
+      margin-bottom: 10px;
+      
+      @include respond-to(md) {
+        margin-bottom: 0;
+      }
+      
+      a {
+        font-size: 0.9rem;
+        transition: color 0.2s ease;
+        
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
+  }
 }
 
 .footer-right {
   margin-right: 50px;
+  
+  @include respond-to(md) {
+    margin-right: 0;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  
+  @include respond-to(sm) {
+    margin-right: 0;
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: 20px;
+  }
 
   h4, p {
     margin-bottom: 10px;
@@ -62,16 +154,31 @@ footer .footer-nav .f-nav ul li {
 
   .number {
     margin-bottom: 40px;
+    
+    @include respond-to(sm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .icon-instagram {
+    @include respond-to(sm) {
+      justify-content: center;
+      display: flex;
+      gap: 15px;
+    }
   }
 
   a {
     margin-right: 10px;
     display: inline-block;
     width: 23px;
+    
+    @include respond-to(sm) {
+      margin-right: 0;
+    }
 
     img {
       width: 100%;
-      -o-object-fit: cover;
       object-fit: cover;
     }
   }
