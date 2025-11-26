@@ -94,7 +94,6 @@
       top: 45%;
       font-size: clamp(1.5rem, 4vw, 2.5rem);
       text-align: center;
-      padding: 0 1rem;
       
       @include respond-to(sm) {
         top: 40%;
@@ -107,7 +106,7 @@
     .bn-content {
       text-shadow: 1.5px 1.5px 1.5px rgba(255, 255, 255, 0.5);
       position: absolute;
-      top: 50%;
+      top: 55%;
       font-size: clamp(1rem, 2.5vw, 1.5rem);
       text-align: center;
       padding: 0 1rem;
