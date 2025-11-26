@@ -144,6 +144,7 @@
         display: grid;
         row-gap: 3.5rem;
         align-items: right;
+        justify-content: center;
         
         @include respond-to(md) {
           row-gap: 2.5rem;
@@ -179,7 +180,7 @@
           
           @include respond-to(sm) {
             flex-direction: column-reverse;
-            min-height: auto;
+            height: 380px;
           }
 
           &:hover img {
@@ -206,28 +207,36 @@
           // 프로필 콘텐츠 영역
           // =================================
           .profile-content {
-            width: 50%;
+            width: 45%;
             height: 100%;
-            min-height: 245px;
+            min-height: 230px;
             display: grid;
             justify-items: center;
             align-content: center;
             line-height: 1.6;
-            padding: 1.5rem;
+            
             
             @include respond-to(lg) {
-              min-height: 220px;
+              // min-height: 230px;
+              max-height: 250px;
+              line-height: 1.5;
+              padding: 0;
             }
             
             @include respond-to(md) {
               min-height: 200px;
-              padding: 1rem;
+              max-height: 250px;
+              padding: 0 1.5rem;
             }
             
             @include respond-to(sm) {
               width: 100%;
-              min-height: auto;
-              padding: 1.5rem;
+              // max-height: 250px;
+              height: 35.5%;
+              padding: 1rem;
+              min-height: unset;
+              max-height: unset;
+              align-content: start;
             }
 
             > p {
@@ -240,7 +249,7 @@
           // 프로필 이미지 영역
           // =================================
           .profile-img {
-            width: 50%;
+            width: 55%;
             height: 100%;
             min-height: 245px;
             display: flex;
@@ -258,7 +267,8 @@
             
             @include respond-to(sm) {
               width: 100%;
-              min-height: 200px;
+              height: 64.5%;
+              min-height: unset;
             }
 
             img {
